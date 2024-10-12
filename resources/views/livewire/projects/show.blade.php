@@ -1,3 +1,1 @@
-<div>
-    componente livewre projects show
-</div>
+<x-projects.card :$project />

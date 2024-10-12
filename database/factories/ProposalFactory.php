@@ -10,17 +10,12 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ProposalFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-           'email' => fake()->safeEmail(),
-           'hours' => fake()->randomNumber(),
-           'project_id' => Project::factory(),
+            'email' => fake()->safeEmail(),
+            'hours' => fake()->numberBetween(1, 120),
+            'project_id' => Project::factory(),
         ];
     }
 }

@@ -14,8 +14,8 @@ class Index extends Component
     }
 
     #[Computed()]
-    public function projects(){
+    public function projects()
+    {
         return Project::query()->inRandomOrder()->get();
     }
-
 }
